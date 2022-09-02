@@ -1,0 +1,18 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "PlayfairDisplay", sans-serif;
+
+  // colors
+  --color-white: #fff;
+  --color-black: #000;
+  --color-text: #626262;
+  --color-text-light: #b4ad9e;
+  --color-dusty: #989898;
+  --color-news-bg: #f0f0f0;
+  --color-also-bg: #f5f5f5;
+  --color-title: #333;
+  --color-skeptic: #cae5e0;
+  --color-border: #c8c8c8;
+}

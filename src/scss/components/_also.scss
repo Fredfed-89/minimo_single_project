@@ -1,0 +1,81 @@
+.also {
+  padding-top: 65px;
+  padding-bottom: 85px;
+  background-color: var(--color-also-bg);
+
+  @include mobile-l {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__subtitle {
+    font-family: "Ubuntu";
+    display: block;
+    margin-bottom: 35px;
+    font-size: 14px;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    line-height: 1.2;
+
+    @include mobile-m {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @include desktop-s {
+      justify-content: center;
+    }
+
+    @include macbook {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 38px;
+
+      @include macbook {
+        margin-right: 15px;
+      }
+
+      @include mobile-m {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__image-inner {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    position: relative;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -15%;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-text);
+      transition: width 0.3s ease-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    @include macbook {
+      text-align: center;
+    }
+  }
+}
